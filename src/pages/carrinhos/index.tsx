@@ -11,6 +11,12 @@ export default function Carrinho() {
     <>
       <Image source={topo} style={Styles.top} />
       <Text style={Styles.title}>Detalhe do Carrinho</Text>
+      <View>
+        <Text>Carrinho de compras</Text>
+        <Text>Fazenda Etec Cidade do Livro</Text>
+        <Text>Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha</Text>
+        <Text>R$ 40,00</Text>
+      </View>
     </>
   );
 }
