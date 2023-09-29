@@ -5,11 +5,15 @@ import topo from "../../../../assets/topo.png";
 //para saber o tamanho da tela e enquadrar a imagem de maneira correta
 const width = Dimensions.get("screen").width;
 
-export default function Topo() {
+type Props ={
+  titulo: string;
+}  // adicionei
+
+export default function Topo({titulo}: Props) {
   return (
     <View>
       <Image source={topo} style={Styles.top} />
-      <Text style={Styles.title}>Detalhe do Carrinho</Text>
+      <Text style={Styles.title}>{titulo}</Text>
     </View>
   );
 }
