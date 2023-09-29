@@ -2,21 +2,31 @@ import * as React from "react";
 import { StyleSheet, Image, Dimensions, Text, View } from "react-native";
 import logo from "../../../../assets/logo.png";
 
-export default function Detalhe() {
+type Props = {
+  nome: string;
+  nomeFazenda: string;
+  descricao: string;
+  preco: string;
+};
+
+export default function Detalhe({
+  nome,
+  nomeFazenda,
+  descricao,
+  preco
+  
+}: Props) {
   return (
     <>
-      <Text style={Styles.titulocarrinho}>Carrinho de compras</Text>
+      <Text style={Styles.titulocarrinho}>{nome}</Text>
 
       <View style={Styles.fazenda}>
         <Image style={Styles.imagemfazenda} source={logo} />
-        <Text style={Styles.nomefazenda}>Fazenda Etec Cidade do Livro</Text>
+        <Text style={Styles.nomefazenda}>{nomeFazenda}</Text>
       </View>
 
-      <Text style={Styles.descricao}>
-        Uma cesta com produtos selecionados cuidadosamente da fazenda direto da
-        cozinha
-      </Text>
-      <Text style={Styles.preco}>R$ 40,00</Text>
+      <Text style={Styles.descricao}>{descricao}</Text>
+      <Text style={Styles.preco}>{preco}</Text>
     </>
   );
 }

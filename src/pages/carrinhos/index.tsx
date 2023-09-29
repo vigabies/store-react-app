@@ -7,9 +7,15 @@ import Detalhe from "./components/detalhe";
 export default function Carrinho() {
   return (
     <View>
-      <Topo titulo={carrinho.topo.titulo} />{" "}
+      <Topo titulo={carrinho.topo.titulo} />
       <View style={Styles.carrinho}>
-        <Detalhe />
+        <Detalhe 
+        nome={carrinho.detalhes.nome}
+        nomeFazenda={carrinho.detalhes.nomeFazenda}
+        descricao={carrinho.detalhes.descricao}
+        preco={carrinho.detalhes.preco}
+        // botao={carrinho.detalhes.botao}
+        />
       </View>
     </View>
   );
